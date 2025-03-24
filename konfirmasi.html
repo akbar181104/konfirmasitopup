@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konfirmasi Pembayaran</title>
-    <link rel="stylesheet" href="konfirmasi.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -62,23 +61,5 @@
 
         <button onclick="closeTab()">Tutup</button>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            function getQueryParam(param) {
-                const urlParams = new URLSearchParams(window.location.search);
-                return urlParams.get(param) || "-"; // Default ke "-" jika tidak ada data
-            }
-
-            document.getElementById("user-id").textContent = getQueryParam("user");
-            document.getElementById("zone-id").textContent = getQueryParam("zone");
-            document.getElementById("package").textContent = getQueryParam("uc");
-            document.getElementById("total-price").textContent = "Rp. " + getQueryParam("price");
-        });
-
-        function closeTab() {
-            window.close();
-        }
-    </script>
 </body>
 </html>
